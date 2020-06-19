@@ -1,7 +1,7 @@
 const Mongoose = require("mongoose");
 const Schema = Mongoose.Schema;
 
-const author = new Schema({
+const book = new Schema({
   title: { type: String, required: true },
   author: { type: Schema.Types.ObjectId, ref: "book_sell_auhtor" },
   description: { type: String, required: true },
@@ -9,4 +9,4 @@ const author = new Schema({
   price: { type: Number, required: true },
 });
 
-module.exports = Mongoose.model("book_sell_auhtor", author);
+module.exports = Mongoose.model("book_sell_book", book);
